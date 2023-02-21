@@ -31,6 +31,7 @@ public class EmployeeDao {
                 employee.setJob(resultSet.getString("job"));
                 employee.setRoleId(resultSet.getInt("idRole"));
                 employee.setStatus(resultSet.getBoolean("isStatus"));
+                employee.setPassword(resultSet.getString("password"));
                 employees.add(employee);
             }
             connection.close();
@@ -60,6 +61,7 @@ public class EmployeeDao {
                 employee.setJob(resultSet.getString("job"));
                 employee.setRoleId(resultSet.getInt("idRole"));
                 employee.setStatus(resultSet.getBoolean("isStatus"));
+                employee.setPassword(resultSet.getString("password"));
                 return employee;
             }
             connection.close();
@@ -73,8 +75,8 @@ public class EmployeeDao {
         try {
             Connection connection = JdbcConnection.getConnection();
             String query = "INSERT INTO EMPLOYEES (name,email, phone,address, gender, idDepartment,"
-                            +" job, idRole, isStatus)"
-                            + " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                            +" job, idRole, isStatus,password)"
+                            + " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, employee.getName());
             preparedStatement.setString(2, employee.getEmail());
@@ -85,6 +87,8 @@ public class EmployeeDao {
             preparedStatement.setString(7, employee.getJob());
             preparedStatement.setInt(8, employee.getRoleId());
             preparedStatement.setBoolean(9, employee.isStatus());
+            preparedStatement.setString(10, employee.getPassword());
+
 
             if(preparedStatement.executeUpdate() > 0) {
                 System.out.println("Added personnel successfully.");

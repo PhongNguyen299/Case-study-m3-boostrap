@@ -40,7 +40,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employee = new Employee(
                 employeeDto.getName(), employeeDto.getEmail(),employeeDto.getPhone(),employeeDto.getAddress(),
                 employeeDto.isGender(),employeeDto.getDepartmentId(),employeeDto.getJob(),
-                employeeDto.getRoleId(),employeeDto.isStatus());
+                employeeDto.getRoleId(),employeeDto.isStatus(),employeeDto.getPassword());
         employeeDao.insert(employee);
     }
     @Override

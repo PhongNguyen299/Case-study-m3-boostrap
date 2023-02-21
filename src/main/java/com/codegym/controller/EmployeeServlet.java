@@ -64,9 +64,10 @@ public class EmployeeServlet extends HttpServlet {
         String job = req.getParameter("job");
         Integer roleId = Integer.parseInt(req.getParameter("roleId"));
         Boolean isStatus = Boolean.parseBoolean(req.getParameter("isStatus"));
+        String password = req.getParameter("password");
 
         EmployeeDto employeeDto = new EmployeeDto(name, email, phone, address,
-                gender,departmentId,job,roleId, isStatus);
+                gender,departmentId,job,roleId, isStatus,password);
 
         switch (action) {
             case "/employee/add":

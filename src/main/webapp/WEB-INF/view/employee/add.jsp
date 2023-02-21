@@ -35,7 +35,13 @@
                                     <div class="col-12">
                                         <label for="email" class="form-label"> Email</label>
                                         <input type="text" name="email" class="form-control" id="email" required>
-                                        <div class="invalid-feedback">Please enter a valid Email Email!</div>
+                                        <div class="invalid-feedback">Please enter a valid  Email!</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="text" name="password" class="form-control" id="password" required>
+                                        <div class="invalid-feedback">Please enter a valid Password!</div>
                                     </div>
 
                                     <div class="col-12">
@@ -108,6 +114,8 @@
                                     <%--                                    <input type="password" name="password" class="form-control" id="yourPassword" required>--%>
                                     <%--                                    <div class="invalid-feedback">Please enter your password!</div>--%>
                                     <%--                                </div>--%>
+
+
 
                                     <div class="col-12">
                                         <div class="form-check">

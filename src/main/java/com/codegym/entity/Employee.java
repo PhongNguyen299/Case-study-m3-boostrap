@@ -18,9 +18,23 @@ public class Employee {
     private Date startDay;
     private Date endDay;
     private boolean isStatus;
+    private String password;
 
     public Employee() {}
 
+    public Employee(int id, String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus,String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.gender = gender;
+        this.departmentId = departmentId;
+        this.job = job;
+        this.roleId = roleId;
+        this.isStatus = isStatus;
+        this.password = password;
+    }
     public Employee(int id, String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus) {
         this.id = id;
         this.name = name;
@@ -34,7 +48,7 @@ public class Employee {
         this.isStatus = isStatus;
     }
 
-    public Employee(String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus) {
+    public Employee(String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus,String password) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -44,9 +58,11 @@ public class Employee {
         this.job = job;
         this.roleId = roleId;
         this.isStatus = isStatus;
+        this.password = password;
+
     }
 
-    public Employee(int id, String name, String email, String phone, String address, Year dob, boolean gender, int departmentId, String job, double salary, int roleId, Date startDay, Date endDay, boolean isStatus) {
+    public Employee(int id, String name, String email, String phone, String address, Year dob, boolean gender, int departmentId, String job, double salary, int roleId, Date startDay, Date endDay, boolean isStatus,String password) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -61,6 +77,7 @@ public class Employee {
         this.startDay = startDay;
         this.endDay = endDay;
         this.isStatus = isStatus;
+        this.password = password;
     }
 
     public int getId() {
@@ -173,5 +190,13 @@ public class Employee {
 
     public void setStatus(boolean status) {
         isStatus = status;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

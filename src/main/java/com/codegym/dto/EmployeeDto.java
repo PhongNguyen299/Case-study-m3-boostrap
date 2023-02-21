@@ -14,10 +14,23 @@ public class EmployeeDto {
     private String job;
     private int roleId;
     private boolean isStatus;
+    private String password;
 
     public EmployeeDto() {
     }
 
+    public EmployeeDto(String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus,String password) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.gender = gender;
+        this.departmentId = departmentId;
+        this.job = job;
+        this.roleId = roleId;
+        this.isStatus = isStatus;
+        this.password = password;
+    }
     public EmployeeDto(String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus) {
         this.name = name;
         this.email = email;
@@ -30,6 +43,19 @@ public class EmployeeDto {
         this.isStatus = isStatus;
     }
 
+    public EmployeeDto(int id, String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus,String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.gender = gender;
+        this.departmentId = departmentId;
+        this.job = job;
+        this.roleId = roleId;
+        this.isStatus = isStatus;
+        this.password = password;
+    }
     public EmployeeDto(int id, String name, String email, String phone, String address, boolean gender, int departmentId, String job, int roleId, boolean isStatus) {
         this.id = id;
         this.name = name;
@@ -124,6 +150,14 @@ public class EmployeeDto {
 
     public boolean isStatus() {
         return isStatus;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getStatus() {
